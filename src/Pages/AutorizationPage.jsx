@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginForm } from "redux/auth/authOperation";
 
 
 export const Authorization = () => {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch()
 
 const inputs = {
   email: setEmail,
@@ -16,7 +19,13 @@ const inputs = {
 
      const handleFormSubmitAutoriz = e => {
        e.preventDefault();
-     
+        const userInfo = {
+          email,
+          password,
+        };
+       dispatch(loginForm(userInfo));
+       setEmail('')
+       setPassword('')
      };
     
     return (

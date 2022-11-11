@@ -1,7 +1,10 @@
-
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContactData } from 'redux/PhonebookRedax/phonebookThunk';
+import {
+  addContactData,
+  fetchContactsData,
+} from 'redux/PhonebookRedax/phonebookThunk';
 
 export const Phonebook = () => {
   const dispatch = useDispatch();
@@ -15,6 +18,10 @@ export const Phonebook = () => {
     }
     dispatch(addContactData({ name, number }));
   };
+
+  useEffect(() => {
+    dispatch(fetchContactsData());
+  }, [dispatch]);
 
   const onChangeName = e => {
     setName(e.target.value);
@@ -59,4 +66,3 @@ export const Phonebook = () => {
     </>
   );
 };
-

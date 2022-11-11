@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { registrationForm } from 'redux/auth/authOperation';
 
 export const RegistrationForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repPassword, setRepPassword] = useState('');
+  const dispatch = useDispatch();
 
   const inputs = {
     name: setName,
@@ -19,16 +22,20 @@ export const RegistrationForm = () => {
     
     const handleFormSubmit = e => {
       e.preventDefault();
-    //   if (password === repPassword) {
-    //     const userInfo = {
-    //       name,
-    //       email,
-    //       password,
-    //     };
-    //     dispatch(registration(userInfo));
-    //   } else {
-    //     toast.warn('Упс, паролі не збігаються');
-    //   }
+        if (password === repPassword) {
+          const userInfo = {
+            name,
+            email,
+            password,
+          };
+          dispatch(registrationForm(userInfo));
+          setName('')
+          setPassword('')
+          setEmail('')
+          setRepPassword('')
+        } else {
+          alert('Passwords do not match');
+        }
     };
   return (
     <form onSubmit={handleFormSubmit}>
