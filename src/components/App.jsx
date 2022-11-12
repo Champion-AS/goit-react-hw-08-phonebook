@@ -1,6 +1,3 @@
-import { Phonebook } from './Phonebook/Phonebook';
-import { Filter } from './Filter/Filter';
-import { ContactList } from './ContactList/ContactList';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
