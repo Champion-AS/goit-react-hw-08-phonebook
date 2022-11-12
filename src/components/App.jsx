@@ -23,16 +23,16 @@ export const App = () => {
   return (
     <Layout>
       <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          fontSize: 16,
-          color: '#010101',
-          gap: 10,
-        }}
+      // style={{
+      //   height: '100vh',
+      //   display: 'flex',
+      //   flexDirection: 'column',
+      //   justifyContent: 'flex-start',
+      //   alignItems: 'center',
+      //   fontSize: 16,
+      //   color: '#010101',
+      //   gap: 10,
+      // }}
       >
         <Routes>
           <Route path="/" element={<Home />} />

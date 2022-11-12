@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registrationForm } from 'redux/auth/authOperation';
+import s from './Pages.module.css';
 
 export const RegistrationForm = () => {
   const [name, setName] = useState('');
@@ -18,30 +19,31 @@ export const RegistrationForm = () => {
 
   const handleInput = e => {
     inputs[e.target.name](e.target.value);
-    };
-    
-    const handleFormSubmit = e => {
-      e.preventDefault();
-        if (password === repPassword) {
-          const userInfo = {
-            name,
-            email,
-            password,
-          };
-          dispatch(registrationForm(userInfo));
-          setName('')
-          setPassword('')
-          setEmail('')
-          setRepPassword('')
-        } else {
-          alert('Passwords do not match');
-        }
-    };
+  };
+
+  const handleFormSubmit = e => {
+    e.preventDefault();
+    if (password === repPassword) {
+      const userInfo = {
+        name,
+        email,
+        password,
+      };
+      dispatch(registrationForm(userInfo));
+      setName('');
+      setPassword('');
+      setEmail('');
+      setRepPassword('');
+    } else {
+      alert('Passwords do not match');
+    }
+  };
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
+    <form onSubmit={handleFormSubmit} className={s.form}>
+      <label className={s.label}>
         Your name
         <input
+          className={s.input}
           type="text"
           name="name"
           value={name}
@@ -50,9 +52,10 @@ export const RegistrationForm = () => {
           placeholder="Your name"
         />
       </label>
-      <label>
+      <label className={s.label}>
         Your email address
         <input
+          className={s.input}
           required
           name="email"
           value={email}
@@ -61,9 +64,10 @@ export const RegistrationForm = () => {
           placeholder="Your email address"
         />
       </label>
-      <label>
+      <label className={s.label}>
         Enter password
         <input
+          className={s.input}
           required
           type="password"
           name="password"
@@ -72,9 +76,10 @@ export const RegistrationForm = () => {
           placeholder="Enter password"
         />
       </label>
-      <label>
+      <label className={s.label}>
         Repeat password
         <input
+          className={s.input}
           required
           name="repPassword"
           type="password"
@@ -83,7 +88,9 @@ export const RegistrationForm = () => {
           placeholder="Repeat password"
         />
       </label>
-      <button type="submit">Registration</button>
+      <button type="submit" className={s.btn}>
+        Registration
+      </button>
     </form>
   );
 };

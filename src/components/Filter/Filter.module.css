@@ -1,0 +1,23 @@
+.label {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(24, 6, 106, 0.942);
+}
+
+.input {
+    width: 200px;
+    height: 25px;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    gap: 20px;
+}

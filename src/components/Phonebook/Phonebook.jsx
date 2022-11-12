@@ -5,6 +5,7 @@ import {
   addContactData,
   fetchContactsData,
 } from 'redux/PhonebookRedax/phonebookThunk';
+import s from './Phonebook.module.css';
 
 export const Phonebook = () => {
   const dispatch = useDispatch();
@@ -39,9 +40,10 @@ export const Phonebook = () => {
 
   return (
     <>
-      <form onSubmit={handelSubmit}>
-        <label>Name</label>
+      <form onSubmit={handelSubmit} className={s.form}>
+        <label className={s.label}>Name</label>
         <input
+          className={s.input}
           type="text"
           name="name"
           value={name}
@@ -50,8 +52,9 @@ export const Phonebook = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-        <label>Number</label>
+        <label className={s.label}>Number</label>
         <input
+          className={s.input}
           type="tel"
           name="number"
           value={number}
@@ -61,7 +64,9 @@ export const Phonebook = () => {
           required
         />
 
-        <button type="submit">Add contact</button>
+        <button type="submit" className={s.btn}>
+          Add contact
+        </button>
       </form>
     </>
   );
