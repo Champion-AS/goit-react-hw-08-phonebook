@@ -35,11 +35,17 @@ export const Header = () => {
         )}
       </nav>
       {isLoggedIn && (
-        <div className={s.user}>
-          <span>Hello: {user.name}</span>
-          <br />
-          <span>{user.email}</span>
-        </div>
+        <>
+          <div className={s.user}>
+            <span>Hello: {user.name}</span>
+            <br />
+            <span>{user.email}</span>
+            <br />
+            <NavLink to="/contacts" className={s.text}>
+              Contacts
+            </NavLink>
+          </div>
+        </>
       )}
     </header>
   );

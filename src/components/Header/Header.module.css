@@ -3,7 +3,7 @@
     font-weight: 700;
     margin: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -24,7 +24,6 @@
 .btn {
     display: flex;
     align-items: center;
-    margin: auto;
     font-size: 15px;
     border: 1px solid black;
     border-radius: 4px;

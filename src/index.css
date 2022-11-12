@@ -8,6 +8,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+header {
+  border-bottom: 1px solid blue;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  ;
 }
 
 code {
