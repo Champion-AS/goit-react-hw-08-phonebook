@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.955ec82e.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.011e2d1a.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.6a3f17cb.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.b36d5cdb.js",
+    "static/media/silhouette-of-ukrainian-map-on-bright-background.jpg": "/goit-react-hw-08-phonebook/static/media/silhouette-of-ukrainian-map-on-bright-background.cf1770a7678d35a4912d.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.955ec82e.css.map": "/goit-react-hw-08-phonebook/static/css/main.955ec82e.css.map",
-    "main.011e2d1a.js.map": "/goit-react-hw-08-phonebook/static/js/main.011e2d1a.js.map"
+    "main.6a3f17cb.css.map": "/goit-react-hw-08-phonebook/static/css/main.6a3f17cb.css.map",
+    "main.b36d5cdb.js.map": "/goit-react-hw-08-phonebook/static/js/main.b36d5cdb.js.map"
   },
   "entrypoints": [
-    "static/css/main.955ec82e.css",
-    "static/js/main.011e2d1a.js"
+    "static/css/main.6a3f17cb.css",
+    "static/js/main.b36d5cdb.js"
   ]
 }
